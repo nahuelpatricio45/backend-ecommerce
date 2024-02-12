@@ -9,6 +9,7 @@ import cookieParser from 'cookie-parser';
 import productRoutes from './routes/productRoutes.js'
 import cors from 'cors'
 import cartRoutes from './routes/cartRoutes.js'
+import paymentRoutes from './routes/paymentRoutes.js'
 
 dotenv.config()
 
@@ -39,5 +40,6 @@ try {
     app.use('/api', userRoutes);
     app.use('/api/products', productRoutes)
     app.use('/api', cartRoutes)
+    app.use('/api', paymentRoutes)
 } catch(err) {
     console.log(`ERROR al inicializar backend: ${err.message}`)}
