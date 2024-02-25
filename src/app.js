@@ -40,6 +40,6 @@ try {
     app.use('/api', userRoutes);
     app.use('/api/products', productRoutes)
     app.use('/api', cartRoutes)
-    app.use('/api', paymentRoutes)
+    app.use('/api/payments', paymentRoutes)
 } catch(err) {
     console.log(`ERROR al inicializar backend: ${err.message}`)}
